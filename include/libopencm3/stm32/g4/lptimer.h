@@ -1,9 +1,18 @@
-/* This provides unification of code over STM32 subfamilies */
+/** @defgroup lptimer_defines LPTIMER Defines
+
+@brief <b>Defined Constants and Types for the STM32G4xx LPTIMER</b>
+
+@ingroup STM32G4xx_defines
+
+@version 1.0.0
+
+@date 03 April 2024
+
+LGPL License Terms @ref lgpl_license
+ */
 
 /*
  * This file is part of the libopencm3 project.
- *
- * Copyright (C) 2019 Guillaume Revaillot <g.revaillot@gmail.com>
  *
  * This library is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
@@ -19,22 +28,9 @@
  * along with this library.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include <libopencm3/cm3/common.h>
-#include <libopencm3/stm32/memorymap.h>
+#ifndef LIBOPENCM3_LPTIMER_H
+#define LIBOPENCM3_LPTIMER_H
 
-#if defined(STM32F4)
-#       include <libopencm3/stm32/f4/lptimer.h>
-#elif defined(STM32F7)
-#       include <libopencm3/stm32/f7/lptimer.h>
-#elif defined(STM32L0)
-#       include <libopencm3/stm32/l0/lptimer.h>
-#elif defined(STM32L4)
-#       include <libopencm3/stm32/l4/lptimer.h>
-#elif defined(STM32G0)
-#       include <libopencm3/stm32/g0/lptimer.h>
-#elif defined(STM32G4)
-#       include <libopencm3/stm32/g4/lptimer.h>
-#else
-#       error "stm32 family not defined."
+#include <libopencm3/stm32/common/lptimer_common_g4.h>
+
 #endif
-
